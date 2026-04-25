@@ -240,13 +240,55 @@ body {
     font-weight: 600;
     color: #6f84fd;
 }
-/*responsividade*/
-@media (max-width: 768px){
-    /*cabeçalho*/
+/* --- Responsividade (Celular) --- */
+
+@media (max-width: 768px) {
+    /* Ajuste do Cabeçalho */
     .navbar {
         padding: 15px 5%;
-        flex-direction: column;
+        flex-direction: column; /* Logo em cima, menu embaixo */
         gap: 10px;
     }
-    
+
+    .navbar nav a {
+        margin: 0 10px;
+        font-size: 0.8rem;
+    }
+
+    /* Ajuste do Hero (Texto principal) */
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Diminui o título para não quebrar */
+        padding: 0 20px;
+    }
+
+    /* Ajuste dos Cards (Um embaixo do outro) */
+    .servicos {
+        flex-direction: column; 
+        padding: 40px 5%;
+        margin-top: 0; /* Remove a sobreposição negativa no mobile */
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    /* Ajuste da Galeria */
+    .grid-fotos {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Fotos menores */
+        gap: 10px;
+    }
+
+    /* Ajuste do Contato */
+    .contato-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contato-info, .contato-form {
+        min-width: 100%;
+    }
 }
