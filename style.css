@@ -1,0 +1,242 @@
+/*esse link é referente a essa fonte "Montserrat"*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #dedcdc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* cabeçalho */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); /*efeito vidro*/
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+.navbar nav a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 25px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: 0.3s;
+}
+.navbar nav a:hover {
+    color: #b8860b;
+}
+.btn-agendar {
+    background-color: #333;
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+/*hero*/
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1600') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/*cards*/
+.servicos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 8%;
+    margin-top: -50px;
+}
+.card {
+    background: rgb(212, 212, 212);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex: 1;
+    border: 0.1rem solid #ac9953;
+}
+.card:hover {
+    transform: translateY(-10px); /*faz o card subir*/
+}
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+    color: #232323;
+}
+.card p {
+    font-size: 0.9rem;
+    color: #383838;
+}
+/*galeria*/
+.galeria {
+    padding: 80px 8%;
+    text-align: center;
+}
+.galeria h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+.grid-fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.foto-item {
+    overflow: hidden;
+    border-radius: 10px;
+    height: 300px;
+}
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*preencher sem distorção*/
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+.foto-item img:hover {
+    transform: scale(1.1); /*zoom*/
+}
+/*contato*/
+.contato {
+    padding: 100px 8%;
+    background-color: #bdbcbc;
+}
+.contato-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap; /*funcionar em celular*/
+}
+.contato-info {
+    flex: 1;
+    min-width: 300px;
+}
+.contato-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.info-item {
+    margin-top: 20px;
+}
+/*formulário*/
+.contato-form {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contato-form input, .contato-form textarea {
+    padding: 15px;
+    border: 1px solid #a6a6a6;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s;
+}
+.contato-form input:focus, 
+.contato-form textarea:focus {
+    border-color: #7c601b;/*muda cor ao clicar*/
+}
+.btn-enviar {
+    background-color: #959494;
+    color: #404040;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn-enviar:hover {
+    background-color: #2f2d28;
+}
+/*footer*/
+.footer-principal {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 60px 8% 20px 8%;
+    text-align: center;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 40px;
+}
+.footer-brand .logo {
+    color: #fff;
+    margin-bottom: 10px;
+}
+.footer-brand p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    opacity: 0.6;
+}
+.footer-social a:hover {
+    opacity: 1;
+    color: #7c601b;
+}
+/*créditos*/
+.credits {
+    padding-top: 20px;
+    font-size: 0.75rem;
+    opacity: 0.5;
+    letter-spacing: 1px;
+}
+.credits span {
+    font-weight: 600;
+    color: #6f84fd;
+}
