@@ -240,3 +240,12 @@ body {
     font-weight: 600;
     color: #6f84fd;
 }
+/*responsividade*/
+@media (max-width: 768px){
+    /*cabeçalho*/
+    .navbar {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
